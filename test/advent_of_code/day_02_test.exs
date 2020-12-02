@@ -3,19 +3,29 @@ defmodule AdventOfCode.Day02Test do
 
   import AdventOfCode.Day02
 
-  @tag :skip
-  test "part1" do
-    input = nil
-    result = part1(input)
+  test "good_password_count" do
+    input =
+      parse_file("""
+      1-3 a: abcde
+      1-3 b: cdefg
+      2-9 c: ccccccccc
+      """)
 
-    assert result
+    result = good_password_count(input)
+
+    assert result == 2
   end
 
-  @tag :skip
-  test "part2" do
-    input = nil
-    result = part2(input)
+  test "new_good_password_count" do
+    input =
+      parse_file("""
+      1-3 a: abcde
+      1-3 b: cdefg
+      2-9 c: ccccccccc
+      """)
 
-    assert result
+    result = new_good_password_count(input)
+
+    assert result == 1
   end
 end
