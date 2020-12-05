@@ -3,19 +3,16 @@ defmodule AdventOfCode.Day05Test do
 
   import AdventOfCode.Day05
 
-  @tag :skip
   test "part1" do
-    input = nil
+    input =
+      parse_file("""
+      BFFFBBFRRR
+      FFFBBBFRRR
+      BBFFBBFRLL
+      """)
+
     result = part1(input)
 
-    assert result
-  end
-
-  @tag :skip
-  test "part2" do
-    input = nil
-    result = part2(input)
-
-    assert result
+    assert result == 820
   end
 end
