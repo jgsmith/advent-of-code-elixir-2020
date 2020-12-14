@@ -3,19 +3,31 @@ defmodule AdventOfCode.Day14Test do
 
   import AdventOfCode.Day14
 
-  @tag :skip
   test "part1" do
-    input = nil
+    input =
+      parse_file("""
+      mask = XXXXXXXXXXXXXXXXXXXXXXXXXXXXX1XXXX0X
+      mem[8] = 11
+      mem[7] = 101
+      mem[8] = 0
+      """)
+
     result = part1(input)
 
-    assert result
+    assert result == 165
   end
 
-  @tag :skip
   test "part2" do
-    input = nil
+    input =
+      parse_file("""
+      mask = 000000000000000000000000000000X1001X
+      mem[42] = 100
+      mask = 00000000000000000000000000000000X0XX
+      mem[26] = 1
+      """)
+
     result = part2(input)
 
-    assert result
+    assert result == 208
   end
 end
