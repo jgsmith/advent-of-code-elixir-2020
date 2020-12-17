@@ -3,19 +3,29 @@ defmodule AdventOfCode.Day17Test do
 
   import AdventOfCode.Day17
 
-  @tag :skip
   test "part1" do
-    input = nil
+    input =
+      parse_file("""
+      .#.
+      ..#
+      ###
+      """)
+
     result = part1(input)
 
-    assert result
+    assert result == 112
   end
 
-  @tag :skip
   test "part2" do
-    input = nil
+    input =
+      parse_file("""
+      .#.
+      ..#
+      ###
+      """)
+
     result = part2(input)
 
-    assert result
+    assert result == 848
   end
 end

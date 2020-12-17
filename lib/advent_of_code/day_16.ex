@@ -59,7 +59,6 @@ defmodule AdventOfCode.Day16 do
 
     ranges =
       rules
-      |> IO.inspect()
       |> Enum.map(fn r ->
         [l, r] = String.split(r, "-")
         {l, ""} = Integer.parse(l)
