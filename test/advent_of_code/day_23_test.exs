@@ -33,6 +33,7 @@ defmodule AdventOfCode.Day23Test do
     end
   end
 
+  @tag :skip
   test "part2" do
     input = "389125467"
     result = part2(input)
